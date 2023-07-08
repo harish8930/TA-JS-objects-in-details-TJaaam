@@ -17,10 +17,11 @@ Create User (class/function) with the following properties.
   - [ ] name
   - [ ] id
   - [ ] noOfProjects
+     
 - [ ] methods:
   - [ ] getProjects -> return number of project
   - [ ] changeName -> accepts one parameter (newName)returns old user name
   - [ ] incrementProject -> returns updated number of projects
   - [ ] decrementProject -> returns updated number of projects
-
+...
 Write 2 tests for all the different ways of creating object. Test all the methods on these objects.
