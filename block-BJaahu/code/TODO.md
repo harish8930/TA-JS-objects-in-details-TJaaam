@@ -16,6 +16,7 @@ For each different ways of creating object write different solutions.
 - Pseudoclassical Pattern (Put methods inside F.prototype and use `new` to call function)
 - Create using class
 - Write test by creating two objects also test both methods.
+- ..
 
 ### To test use the following data
 
