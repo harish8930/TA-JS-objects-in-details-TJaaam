@@ -1,4 +1,4 @@
-# Inheritance
+# Inheritance.
 
 Convert the below requirements into inheritance using:
 
