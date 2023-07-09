@@ -1,25 +1,22 @@
 console.log(this.document === document); // Output
 
-// ------------
+true;
 
 console.log(this === window); //Output
-
-// ------------
-
+true;
 var myFunction = function () {
   console.log(this);
 };
 myFunction(); // Output
 
-// ------------
+it will log the window object;
 
 function f1() {
   'use strict';
   return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); //false
 
-// ------------
 
 function foo() {
   console.log('Simple function call');
@@ -28,7 +25,7 @@ function foo() {
 
 foo(); //Output ??
 
-// ------------
+true;
 
 // This for IIFE
 (function () {
@@ -36,7 +33,7 @@ foo(); //Output ??
   console.log(this === window);
 })(); //Output
 
-// ------------
+true;
 
 var myObject = {};
 myObject.someMethod = function () {
@@ -44,7 +41,7 @@ myObject.someMethod = function () {
 };
 myObject.someMethod(); //Value Of This
 
-// ------------
+
 
 function Person(fn, ln) {
   this.firstName = fn;
