@@ -1,4 +1,4 @@
-/*
+/*.
 1. Create a function named `myMap` and add the method to `Array.prototype`.
 `myMap` will behave similar to how the `Array.map` works. To test the implementation use the code below.
 */
