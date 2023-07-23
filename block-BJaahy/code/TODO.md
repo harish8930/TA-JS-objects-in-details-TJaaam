@@ -24,7 +24,32 @@ side.height = height;
 - Check the `isEqual` method and pass the two instance you created above.
 
 ## User Class
+class User{
+  constructor(firstname,lastname){
+    this.firstname = firstname;
+    this.lastname = lastname
+  }
+get fullname(){
+ return `${this.firstname} ${this.lastname}`
+}
+set fullname(name){
+if(name.length<5){
+  alert("Fullname should be more than 5 Character")
+}else{
+  let firstname = name.split(" ")[0]
+  let lastname = name.split(" ")[1]
+  this.firstname = firstname;
+  this.lastname = lastname;
+}
+}
+namecontain(str){
+return `${this.firstname} ${this.lastname}`.includes();
+}
+}
 
+
+let person1 = new User("Harish","Kumar");
+let person2 = new User("Micheal","jordan");
 - Create a class named `User` that accepts `firstName` and `lastName` property
 
 - Create a getter method named `fullName` that will return the full name of the person.
