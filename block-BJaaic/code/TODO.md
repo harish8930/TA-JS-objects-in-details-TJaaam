@@ -18,6 +18,54 @@ Methods
 - `summary()` - returns `I live in ${location} and I have ${numberOfLegs}`
 
 #### Dog
+et animalMethod ={
+eat: function(){
+  console.log(`I Live in ${this.location} and i can eat`)
+},
+changeLocation: function(newloaction){
+  this.location = newloaction;
+  return this.newloaction
+},
+summary: function(){
+  console.log(`I live in ${this.location} and i have ${this.nooflegs}`)
+}
+}
+
+
+function createanimal(location,nooflegs){
+  let obj = Object.create(animalMethod);
+  obj.location = location;
+  obj.nooflegs = nooflegs;
+  return obj;
+}
+
+function createDog(location,nooflegs,name,color){
+  let obj = createanimal(location,nooflegs);
+  Object.setPrototypeOf(obj,dogMethod)
+  obj.name = name;
+  obj.color = color;
+  return obj;
+}
+
+
+let dogMethod = {
+bark: function(){
+  alert(`I am ${this.name} and i can bark`)
+},
+changename: function(name){
+this.name = name;
+return this.name
+},
+changecolor: function(newColor){
+this.color = newColor
+return this.color
+},
+summary: function(){
+  return `i am  ${this.name} and i am of ${this.color} color and i can also bark`
+},
+}
+Object.setPrototypeOf(dogMethod,animalMethod)
+
 
 It will have all the properties and methods of the Animal. These are the extra properties and methods these dogs will have.
 
