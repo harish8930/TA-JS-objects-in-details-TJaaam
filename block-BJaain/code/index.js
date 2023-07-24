@@ -53,7 +53,7 @@ function Person(fn, ln) {
 }
 
 let person = new Person('John', 'Reed');
-person.displayName(); // Output
+person.displayName(); // Name: John Reed
 let person2 = new Person('Paul', 'Adams');
 person2.displayName(); // Output
 
@@ -73,7 +73,7 @@ let user = {
   },
 };
 
-user.foo(); // Output
+user.foo(); // false
 let fun1 = user.foo1;
 fun1(); // Output ??
 user.foo1(); // Output ??
@@ -88,13 +88,13 @@ var obj = {
   },
 };
 
-obj.getX(); // Output ??
+obj.getX(); // 81;
 
 var retrieveX = obj.getX;
-retrieveX(); //Output ??
+retrieveX(); //9
 
 var boundGetX = retrieveX.bind(obj);
-boundGetX(); // Output ??
+boundGetX(); // 81
 
 // ------------
 
@@ -108,11 +108,11 @@ function Person(fn, ln) {
 }
 
 let person = new Person('John', 'Reed');
-person.displayName(); // Output
+person.displayName(); // Name: John Reed
 let person2 = new Person('Paul', 'Adams');
-person2.displayName(); // Output
+person2.displayName(); // Name: paul Reed
 
-person.displayName.call(person2); // Output ??
+person.displayName.call(person2); Name: Paul Adams
 
 // ------------
 
@@ -155,10 +155,10 @@ let person = {
   },
 };
 
-person.greet(); // output
+person.greet(); // hello Jay;
 
 let greet = person.greet;
-greet(); // output
+greet(); hello
 
 // -------------
 
@@ -175,14 +175,14 @@ let person = {
     return this.name;
   },
 };
-console.log(person.details.print()); // output?
-console.log(person.print()); // output?
+console.log(person.details.print()); // Jay Details
+console.log(person.print()); // Jay Person
 
 let name1 = person.print;
 let name2 = person.details;
 
-console.log(name1()); // output?
-console.log(name2.print()); // output?
+console.log(name1()); // Jay details
+console.log(name2.print()); // undefined
 
 // --------
 
@@ -197,8 +197,7 @@ let outerFn = function () {
 };
 
 outerFn()();
-
-// -----------
+Error will be occured;
 
 let object = {
   data: [1, 2, 3],
@@ -235,7 +234,7 @@ function print() {
 }
 
 let printNameBob = print.bind(bobObj);
-console.log(printNameBob()); // output??
+console.log(printNameBob()); // Bob
 
 // -------------------
 
@@ -254,7 +253,7 @@ let obj2 = {
 };
 
 let getSecondData = obj2.printSecondData.bind(obj1);
-console.log(getSecondData()); // Output and why ???
+console.log(getSecondData()); // 2;
 
 // --------------
 
