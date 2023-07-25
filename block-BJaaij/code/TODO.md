@@ -29,3 +29,45 @@ Book class will have the following methods:
 - [] `changeCurrentBook` should accept one parameter and update the current index.
 
 After creating the Book and BookList class create 5 book object and add it to list. Test all the methods in Book and BookList class.
+class Book{
+  constructor(title,category,author){
+this.title = title;
+this.category = category;
+this.author = author;
+this.isRead = false;
+this.finishDate = null;
+  }
+markBookasRead(){
+this.isRead = true;
+}
+
+
+}
+
+
+class Booklist{
+  constructor(){
+this.book = []
+this.currentindex = 0;
+  }
+
+add(books =[]){
+this.books = this.books.push(books)
+this.books
+}
+getcurrentBook(){
+  return this.book[this.currentindex]
+}
+getNextBook(){
+  this.currentindex = this.currentindex+1
+  return this.books[this.currentindex]
+}
+getPrevBook(index){
+this.currentindex = this.currentindex-1
+return this.books[this.currentindex]
+}
+changeCurrentbook(index){
+  this.currentindex = index;
+  return this.currentindex
+}
+}
