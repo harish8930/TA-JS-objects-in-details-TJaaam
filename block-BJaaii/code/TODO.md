@@ -45,6 +45,35 @@ console.log(myStack.isEmpty()); // false
 myStack.pop();
 console.log(myStack.isEmpty()); // true
 ```
+class Stack{
+  constructor(){
+this.stack = [];
+  }
+push(value){
+ this.stack.push(value)
+ return this.stack
+}
+pop(){
+  this.stack.pop();
+  return this.stack
+}
+peek(index= this.stack.length-1){
+return this.stack[index]
+}
+reverse(){
+  return this.stack.reverse()
+}
+isempty(){
+  return !(this.stack.length>0)
+}
+displayStack(){
+  return this.stack.join(" ");
+}
+get length(){
+  return  this.stack.length;
+}
+}
+
 
 2. Create a class name `Queue` with the following data and methods. Also implement a `length` getter method.
 
@@ -65,7 +94,35 @@ Getter
 - `length`: returns the current length of the stack.
 
 #### Test
+class Queue{
+  constructor(){
+    this.queue = []
+  }
+enqueue(value){
+  this.queue.push(value)
+  return this.queue
+}
+dequeue(){
+  this.queue.splice(0,1)
+  return this.queue;
+}
+peek(index = 0){
+  return this.stack[index]
+  }
+  reverse(){
+    return this.stack.reverse()
+  }
+  isempty(){
+    return !(this.stack.length>0)
+  }
+  displayStack(){
+    return this.stack.join(" ");
+  }
+  get length(){
+    return  this.stack.length;
+  }
 
+}
 ```js
 let atmQueue = new Queue();
 atmQueue.enqueue('Aman');
